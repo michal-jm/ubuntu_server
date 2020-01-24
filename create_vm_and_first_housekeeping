@@ -1,0 +1,38 @@
+add a network adapter in virtual box - Internal Network 
+manual edit 2nd card during instalation of linux: Subnet 10.0.0.0/24 Address 10.0.0.1
+ignore proxy
+ignore mirror address
+put at tick into instal OpenSSH server
+
+When instalation finished
+--------------------------
+# disable cloud init:
+sudo touch /etc/cloud/cloud-init.disabled
+reboot
+
+# add a new user to sudoers:
+usermod -G <group_name> -a <user_name>
+usermod -G sudo -a bolek
+
+# create new user
+adduser <user_name>
+
+# add to sudoers
+sudo nano /etc/group
+
+# create root pass
+passwd root
+
+# open new terminal window
+Alt+<F2, F3, F...>
+
+# update apt
+apt update
+apt upgrade
+# or
+apt update && apt upgrade
+
+# install midnight commander (mc)
+apt install mc
+# to start mc
+mc
