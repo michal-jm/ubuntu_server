@@ -1,0 +1,17 @@
+# in virtualbox vieo settings check Display/Graphic Controller --> should be VMSVGA
+# restatr virtual box
+# when virtualbox welcome screen switches off press 'Shift' (any shift key)
+# then press 'c' to start grub config
+# then prompt will change to 'grub>'
+grub> setpager=1 (enter)
+grub> vbeinfo
+# then display modes are displayed
+grub> reboot
+# log in to ubintu and go to edit grub file /etc/default/grub
+# line 10 set to:
+GRUB_CMDLINE_LINUX_DEFAULT='nomodeset'
+# at the end of the file add line with resolution choosen from grub screen earlier
+GRUB_GSXPAYLOAD_LINUX=1280x1-24
+# save changes and in command line
+update-grub
+reboot
