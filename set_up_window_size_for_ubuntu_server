@@ -11,7 +11,7 @@ grub> reboot
 # line 10 set to:
 GRUB_CMDLINE_LINUX_DEFAULT='nomodeset'
 # at the end of the file add line with resolution choosen from grub screen earlier
-GRUB_GSXPAYLOAD_LINUX=1280x1-24
+GRUB_GFXPAYLOAD_LINUX=1280x1024
 # save changes and in command line
 update-grub
 reboot
