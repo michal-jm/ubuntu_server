@@ -3,7 +3,7 @@
 # when virtualbox welcome screen switches off press 'Shift' (any shift key)
 # then press 'c' to start grub config
 # then prompt will change to 'grub>'
-grub> setpager=1 (enter)
+grub> set repager=1 (enter)
 grub> vbeinfo
 # then display modes are displayed
 grub> reboot
