@@ -1,0 +1,3 @@
+shutdown now - to swithc off virtual machine
+poweroff - also works
+motd-news - edit /etc/defaults/motd.news, ENABLED=0 (this will disable this nuseance)
