@@ -1,0 +1,41 @@
+shutdown now - to swithc off virtual machine
+poweroff - also works
+motd-news - edit /etc/defaults/motd.news, ENABLED=0 (this will disable this nuseance)
+
+# ip config
+/etc/netplan/50-cloud-init.yaml
+# before ubuntu 17.10 ip config settings were in:
+/etc/network/interfaces
+
+# find network card's name
+ifconfig -a or ip a
+
+# set up ip config on command line (destroyed when machine powers down/resets)
+ip a 172.16.10.1/24 dev enpOs9
+# switch internet card on
+ip l set enpO9 up
+
+# set up ip config in config file
+file looks like following:
+# bla
+# bla
+# bla
+network:
+    ethernets:
+        enpOs3:
+            dhcp:true
+        enpOs8:
+            addresses:
+            - 10.0.0.1/24
+            nameservers: {}
+here we add
+         enpOs9:
+         addresses:
+         - 172.16.10.1/24
+         gateway4: 172.16.10.254 # gateway address - if addidng gateway -->  IPv4 then gateway4 (at the moment this is fake address so internet connection will be interrupted
+         nameservers: {} # in case when adding gateway remove bracket s and continue on the line below
+           addresses: [8.8.8.8, 4.4.4.4]
+this was here in the original file:
+     version: 2
+# to reset setting
+netplan apply
