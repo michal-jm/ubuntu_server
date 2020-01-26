@@ -1,0 +1,15 @@
+# info o userach
+sudo mc edit /etc/passwd
+
+# passwords
+sudo mc edit /etc/shadow
+
+# display password details for an user
+sudo chage -l bolek
+
+# force user to change password
+sudo chage -d 0 bolek
+
+# set up account expitation
+sudo chage -E 2019-12-24 -M 30 -W 5
+-E account expire on the date; -M numbers of days pass expire; -W 5 warning before pass expire
