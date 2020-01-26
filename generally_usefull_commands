@@ -20,3 +20,4 @@ ssh <ubuntu_user_name>@127.0.0.1 -p 22
 # login as root - enable/disable
 sudo mcedit /etc/ssh/sshd_config
 # line PermitRootLogin - uncomment and PermitRootLogin yes
+sudo systemctl restart ssh
