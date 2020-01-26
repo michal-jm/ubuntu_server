@@ -1,3 +1,18 @@
-shutdown now - to swithc off virtual machine
+shutdown now - to switch off virtual machine
 poweroff - also works
 motd-news - edit /etc/defaults/motd.news, ENABLED=0 (this will disable this nuseance)
+
+# check if ssh is working
+systemctl status ssh
+
+# if no ssh
+sudo apt install openssh-server
+
+# check ubuntu ip address
+ip a
+
+# host - check ports that are busy
+netstat -a
+# check if ssh is present in windows 10 system/apps&features/optional features/openSSH client or type ssh in cmd
+# connect from host machine (from my laptop to virtual ubuntu)
+ssh <ubuntu_user_name>@127.0.0.1 -p 22
