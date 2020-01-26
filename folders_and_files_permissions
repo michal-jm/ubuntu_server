@@ -1,0 +1,56 @@
+# others + write
+chmod o+w <folder_name>
+chmod o-rx
+
+# folder permission w --> allows to list contents without allowing entry to the folder
+# folder permission x --> allows to enter folder but not to list contents
+
+# take away read permission, grant exec permission
+chmod o-r, o+x <folder_name>
+
+# take away all permissions from everyone (including owner)
+chmod a-rwx <folder_name>
+
+# give all all the permissions
+chmod a+rwx
+
+# to modify 'owner's' permissions
+chmod u+rwx
+
+# to modify 'group's' permissions
+chmod g+rwx
+----------------------------------------------------
+read write execute
+ 4     2      1
+ 
+ chmod 755 (owner - all; group - r,w; others - r,w)
+ ---------------------------------------------------
+ # Change owner (for flile or folder)
+ chown <user_name> <folder_name>
+ 
+ # change user and group
+ chown <user_name>:<group_name> <folder_name>
+ 
+ # change group only
+ chown :<group_name> <folder_name>
+ 
+ -----------------------------------------------------
+ 1. sticky bit - prevents non user from removing file
+ 2. user id bit
+ 3. group id bit
+ 
+ 1. sticky bit
+ # add a sticky bit to folder:
+ chmod a+t <folder_name> or chmod 1777 <folder_name>
+ 
+ # bit 'g' (rozumiane jako grupa)
+ # if such bit is added to a folder then (regardles of who creates folders within this folder) all the new folders will belong to the group that owns the 'roor' folder wiht sticky bit 'g' attached to it
+chmod g+t <folder_name> or chmod 2777 <folder_name>
+!! if such bit is added to a file then the file is executed based on group permissions not on the one who executes it
+
+bit specialny UID
+chmod u+s <folder_name> (or file name)
+# then user who executes will execute with owner permission not as himself
+
+   
+ 
