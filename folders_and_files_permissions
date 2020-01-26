@@ -61,3 +61,11 @@ chmod u+s <folder_name> (or file name)
 umask 000 - gives full permissions to folders in the current folder
 # the above works when dirs are created inside dirs; however only for the user that we set up umask with and only in current session
 
+-----------------------------------------------------------------------------
+
+Set permanent permissions for all users
+
+# set chmod 777 <folder_name> for the folder that will be the 'base' or 'root folder'
+setfacl –R –d –m u::rwx nazwa_katalogu (lub ścieżka)
+-R --> recusive (apply setting to all files and subfolders)
+u:<name users or leave blank for all users>:
