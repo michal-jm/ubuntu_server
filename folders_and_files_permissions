@@ -51,6 +51,13 @@ chmod g+t <folder_name> or chmod 2777 <folder_name>
 bit specialny UID
 chmod u+s <folder_name> (or file name)
 # then user who executes will execute with owner permission not as himself
+--------------------------------------------------------------------------
 
-   
- 
+# Umask - domyslne uprawnienia dla zasobow tworzonych w danym katalogu
+> umask
+0002 --> uer 7, group 7, others 5
+
+# to set umask
+umask 000 - gives full permissions to folders in the current folder
+# the above works when dirs are created inside dirs; however only for the user that we set up umask with and only in current session
+
