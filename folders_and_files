@@ -1,0 +1,21 @@
+# others + write
+chmod o+w <folder_name>
+chmod o-rx
+
+# folder permission w --> allows to list contents without allowing entry to the folder
+# folder permission x --> allows to enter folder but not to list contents
+
+# take away read permission, grant exec permission
+chmod o-r, o+x <folder_name>
+
+# take away all permissions from everyone (including owner)
+chmod a-rwx <folder_name>
+
+# give all all the permissions
+chmod a+rwx
+
+# to modify 'owner's' permissions
+chmod u+rwx
+
+# to modify 'group's' permissions
+chmod g+rwx
