@@ -10,15 +10,15 @@ When instalation finished
 sudo touch /etc/cloud/cloud-init.disabled
 reboot
 
-# add a new user to sudoers:
-usermod -G <group_name> -a <user_name>
-usermod -G sudo -a bolek
-
 # create new user
 adduser <user_name>
 
 # add to sudoers
 sudo nano /etc/group
+
+# add a new user to sudoers (alternative method):
+usermod -G <group_name> -a <user_name>
+usermod -G sudo -a bolek
 
 # create root pass
 passwd root
@@ -31,6 +31,9 @@ apt update
 apt upgrade
 # or
 apt update && apt upgrade
+
+# list of installed packetd
+apt list --installed
 
 # install midnight commander (mc)
 apt install mc
