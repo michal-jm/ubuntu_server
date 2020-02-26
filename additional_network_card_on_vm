@@ -1,0 +1,13 @@
+select network/ adaprer2
+clicl enable network adapter
+attached to: internal network
+
+when setting up vm - and cards come up - select the second card and manually assign the ip
+subnet: 10.0.0.0/24
+address: 10.0.0.1
+
+create user and password
+select x at instal ssh server
+
+
+
