@@ -1,5 +1,7 @@
 shutdown now - to swithc off virtual machine
 poweroff - also works
+
+vm ubuntu settings/network attached to: internal network
 motd-news - edit /etc/defaults/motd.news, ENABLED=0 (this will disable this nuseance)
 
 # ip config
@@ -39,3 +41,5 @@ this was here in the original file:
      version: 2
 # to reset setting
 netplan apply
+
+# as tehe getaway4 is fake the virtual machine will loses internet access. To restore the access remove the line that starts getaway4 (line 37 above)
