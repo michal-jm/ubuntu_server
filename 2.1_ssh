@@ -1,0 +1,27 @@
+# check if ssh is running
+systemctl status ssh
+
+# in case no service install it:
+sudo apt install openssh-server
+
+# find ip
+ip a
+
+# there are 2 ways to configure ssh on vm:
+# 1 use card in 'nat' mode with port forwarding
+virtual box/network/setting/network adapter/advanced/forwarding rules
+name | protocol | host ip   | host port | guest ip | guest port
+---------------------------------------------------------------
+SSH | TCP       | 172.0.0.1 |   22      |          | 22
+
+if host ip = 127.0.0.1 then we can acces server (vm) onlu from our physical machine (host for the VM)
+if we want access for other machnes in LAN then leave host ip blank
+
+host port- port on our machne. Can be any free port (ideally 22 however if we have ssh server on local machine then it must not be 22)
+netstat -a --> check for ports that are busy 
+
+guest ip leave blank as DHCP working for VM will work it out automatically
+
+guest port has to be 22 as ssh server is working on 22
+
+# 2 use bridge adapter and ip from the same range as outside network (how to find out outside network??)
