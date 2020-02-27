@@ -10,6 +10,9 @@ When instalation finished
 sudo touch /etc/cloud/cloud-init.disabled
 reboot
 
+# disable legal message - create file
+create a file: touch ~/.cache/motd.legal-displayed
+
 # create new user
 adduser <user_name>
 
