@@ -1,0 +1,12 @@
+# check if ssh is running
+systemctl status ssh
+
+# in case no service install it:
+sudo apt install openssh-server
+
+# find ip
+ip a
+
+# there are 2 ways to configure ssh on vm:
+# 1 use card in 'nat' mode with port forwarding
+# 2 use bridge adapter and ip from the same range as outside network (how to find out outside network??)
