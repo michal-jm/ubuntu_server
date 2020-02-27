@@ -25,5 +25,6 @@ guest ip leave blank as DHCP working for VM will work it out automatically
 guest port has to be 22 as ssh server is working on 22
 
 jesli komp laczy sie z oprogramowaniem na nim zainstalowanym 'po sieci' to zazwyczaj uzywa sie 172.0.0.1
+if host ip was left blank then for ssh we could use ip address of the server
 
 # 2 use bridge adapter and ip from the same range as outside network (how to find out outside network??)
