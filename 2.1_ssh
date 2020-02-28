@@ -18,7 +18,13 @@ if host ip = 127.0.0.1 then we can acces server (vm) onlu from our physical mach
 if we want access for other machnes in LAN then leave host ip blank
 
 host port- port on our machne. Can be any free port (ideally 22 however if we have ssh server on local machine then it must not be 22)
-netstat -a --> check for ports that are busy 
+netstat -a --> check for ports that are busy
+netstat-lntu(+/-)p
+-l = only services which are listening on some port
+-n = show port number, don't try to resolve the service name
+-t = tcp ports
+-u = udp ports
+-p = name of the program
 
 guest ip leave blank as DHCP working for VM will work it out automatically
 
