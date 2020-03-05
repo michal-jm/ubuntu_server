@@ -1,0 +1,2 @@
+ nc -vz  34.241.23.181  22
+  nc -vz  <ip>  <port_number>
