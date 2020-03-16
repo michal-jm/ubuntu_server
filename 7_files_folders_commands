@@ -19,3 +19,49 @@
  grap -R ala
  # output> 1:ala (file '1' has text 'ala' in it)
  
+ find . -iname fak* -ls
+# find z parametrem 'exec' - znaczy tyle ze: to co znajdzie find ma byc przekierowant do nowego policenia
+find . -iname fak* -exec cd {} destination_folder \:
+                         cd {} --> to 'catch' all files returned by find
+                         \: - end of exec section (required syntax)
+-------------------------------------------------------------------------
+Archives
+tar -cf dok.tar dokumenty
+-c --> tworzy archiwum 
+-t --> nadaje nazwe
+-v --> displays files included in the archive ( !!! the order of parameters is vital here!! has to be -cvf tar -cvf dok.tar dokumenty)
+dok.tar --> nazwa archiwum
+-z --> compress tar -cvzf dok3.tar.gz dokumenty
+dokumenty --> folder ktory archiwujemy
+
+tar -tf dok.tar
+-t --> view tar file 
+-f --> use when using file name
+
+# oddtworz archiwum z pliku tar
+tar -xf dok.tar --> by default will re-create to the same folder that was put to tar
+tar -xf dok.tar -C /nowa_lokalizacja
+------------------------------------------------------------------------------
+linki
+1. twarde
+2. symboliczne
+
+------------
+gzip
+gzip dok.tar  --> creates dok.tar.gz and removes dok.tar
+gunzip dok.tar.gz --> created dok.tar
+
+
+ # add a file to archive
+ tar -rf <archve name> <patch to the file we want to add>
+ 
+ --------------------------------------------------------------
+ Aliasy
+ alias update="sudo apt update"
+ alias <alias_name>="alias_command"
+ Execute: type: <aias_name> --> in the above example type: update
+ List aliases: type alias
+ 
+ 
+ 
+ 
