@@ -61,6 +61,7 @@ chmod u+s <folder_name> (or file name)
 umask 000 - gives full permissions to folders in the current folder
 # the above works when dirs are created inside dirs; however only for the user that we set up umask with and only in current session
 # masa dziala dla usera dla ktorego jest ustawiona. Inny user ma domyslna maske w tym samym folderze
+# i tylko podczas tej samej sesji
 -----------------------------------------------------------------------------
 
 Set permanent permissions for all users
