@@ -1,0 +1,21 @@
+   ls -la --sort=time
+   
+   mkdir -p dokumenty/{2018/{faktury,umowy},2019/{faktury,umowy},2020/{faktury,umowy}}
+    
+   cp -r (copies folder with content)
+   cp -u (copies only files updated since last copy)
+   rm -r <folder name>  
+   rm -r [95] removes  foledrs that have 9 or 5 in their names
+   
+   diff - compares files and folders
+   
+   cat /proc/cpuinfo
+   grep -i model /proc/cpuinfo
+   cat /proc/cpuinfo | grep model
+   
+ grep -i model\|core /proc/cpuinfo
+ 
+ # search all the files in the current folder for a prhase 'ala' within any of them
+ grap -R ala
+ # output> 1:ala (file '1' has text 'ala' in it)
+ 
