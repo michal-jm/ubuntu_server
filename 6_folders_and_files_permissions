@@ -44,9 +44,9 @@ read write execute
  chmod a+t <folder_name> or chmod 1777 <folder_name>
  
  # bit 'g' (rozumiane jako grupa)
- # if such bit is added to a folder then (regardles of who creates folders within this folder) all the new folders will belong to the group that owns the 'roor' folder wiht sticky bit 'g' attached to it
+ # if such bit is added to a folder then (regardles of who creates folders within this folder) all the new folders will belong to the same group that owns the 'first/root' folder wiht sticky bit 'g' attached to it
 chmod g+t <folder_name> or chmod 2777 <folder_name>
-!! if such bit is added to a file then the file is executed based on group permissions not on the one who executes it
+!! if such bit is added to a file then the file is executed based on the group permissions not on the one who executes it
 
 bit specialny UID
 chmod u+s <folder_name> (or file name)
@@ -55,12 +55,12 @@ chmod u+s <folder_name> (or file name)
 
 # Umask - domyslne uprawnienia dla zasobow tworzonych w danym katalogu
 > umask
-0002 --> uer 7, group 7, others 5
+0002 --> uer 7(this is 7-0), group 7(this is 7-0), others 5 (this is 7-2=5)
 
 # to set umask
 umask 000 - gives full permissions to folders in the current folder
 # the above works when dirs are created inside dirs; however only for the user that we set up umask with and only in current session
-
+# masa dziala dla usera dla ktorego jest ustawiona. Inny user ma domyslna maske w tym samym folderze
 -----------------------------------------------------------------------------
 
 Set permanent permissions for all users
