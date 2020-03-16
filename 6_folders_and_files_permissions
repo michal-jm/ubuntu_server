@@ -65,6 +65,7 @@ umask 000 - gives full permissions to folders in the current folder
 -----------------------------------------------------------------------------
 
 Set permanent permissions for all users
+# jak zrobic by wszystkie zasoby w folderze maily takie same pozwolenia
 
 # set chmod 777 <folder_name> for the folder that will be the 'base' or 'root folder'
 setfacl –R –d –m u::rwx nazwa_katalogu (lub ścieżka)
