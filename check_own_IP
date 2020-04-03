@@ -2,3 +2,8 @@ should give you your public IP address as seen from another location on the inte
 
 sudo apt-get install curl
 curl -4 icanhazip.com
+
+# Network monitoring programs that provide ip(and port) used on server and that reveal from IPs where traffic is comming from:
+https://www.binarytides.com/linux-commands-monitor-network/
+to name a few featured in the article above:
+iptraf, iftop, Nload, tcptrack, Trafshow
